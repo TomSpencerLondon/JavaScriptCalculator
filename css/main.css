@@ -1,6 +1,11 @@
-// Reset CSS
 html {
   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -95,7 +100,7 @@ button:focus {
 }
 
 :root {
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -105,40 +110,15 @@ html {
 }
 
 body {
-  font-family: "Gill Sans", sans-serif;
-  background-color: #FFFAFA;
-  height: 700px;
-  text-align: center;
-}
-
-header {
-  border-bottom: 1px solid grey;
-  display: block;
-  text-align: center;
-  width: 100vw;
-  height: 10vh;
-  color: #FF69B4;
-  position: sticky;
-  z-index: 5;
-}
-
-.header-text1 {
-  font-size: 42px;
-  line-height: 0em;
-  margin: 35px;
-}
-
-.header-text2 {
-  font-size: 14px;
-  line-height: 0em;
-  color: grey;
+  align-items: center;
+  background-image: linear-gradient(236deg, #74ebd5, #acb6e5);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 }
 
 .container {
-  display: flex;
-  height: 90vh;
-  justify-content: center;
-  align-items: center;
+  max-width: 20em;
 }
 
 .container > p {
@@ -150,47 +130,41 @@ header {
   box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2em;
   max-width: 15em;
   overflow: hidden;
-  font-family: "Gill Sans", sans-serif;
-  border: 10px solid #ffff7f;
-  z-index: 1;
 }
 
 .calculator__display {
-  width: 405px;
-  background-color: #D3D3D3;
-  color: #696969;
-  font-size: 40px;
-  padding: 10px 40px;
+  background-color: #222222;
+  color: #fff;
+  font-size: 1.714285714em;
+  padding: 0.5em 0.75em;
   text-align: right;
-  border: 10px solid #ffff7f;
-
 }
 
 .calculator__keys {
-  background-color: #ffff7f;
+  background-color: #999;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 1px;
   grid-template-columns: repeat(4, 1fr);
 }
 
 .calculator__keys > * {
-  background-color: aqua;
-  border-radius: 4px;
-  padding: 20px 10px;
+  background-color: #fff;
+  padding: 0.5em 1.25em;
   position: relative;
   text-align: center;
 }
 
 .calculator__keys > *:active::before,
 .calculator__keys > .is-depressed::before {
-  background-color: #FF69B4;
+  background-color: rgba(0, 0, 0, 0.2);
   bottom: 0;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
   content: "";
   left: 0;
-  opacity: 0.7;
+  opacity: 0.3;
   position: absolute;
   right: 0;
   top: 0;
@@ -198,15 +172,11 @@ header {
 }
 
 .key--operator {
-  background-color: #A9A9A9;
+  background-color: #eee;
 }
 
 .key--equal {
-  background-color: #FFA500;
+  background-image: linear-gradient(to bottom, #fe886a, #ff7033);
   grid-column: -2;
   grid-row: 2 / span 4;
-}
-
-.AC--button {
-  background-color: #eee9e9;
 }
